@@ -1,1 +1,1 @@
-# javascript_beginner_projects
+# Javascript Beginner Project
