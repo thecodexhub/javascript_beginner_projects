@@ -115,9 +115,10 @@ select {
   appearance: none;
   outline: none;
   color: #85257b;
-  width: 10rem;
+  width: 15rem;
   cursor: pointer;
   padding: 1rem;
+  font-size: 0.8rem;
 }
 
 .select {
