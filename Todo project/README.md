@@ -10,6 +10,11 @@ This project shows how to:
 - write javascript functions
 - build a robust frontend-backend flow
 - create and update UI elements using javascript
+- use local storage to save, retrieve and delete todos
+
+## Todos
+
+- [ ] Implement save and retrieve completed todo from local storage 
 
 ## Preview
 
