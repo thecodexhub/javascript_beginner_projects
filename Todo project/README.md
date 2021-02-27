@@ -14,7 +14,7 @@ This project shows how to:
 
 ## Todos
 
-- [ ] Implement save and retrieve completed todo from local storage 
+- [ ] Implement save and retrieve `Checked` todo list from local storage 
 
 ## Preview
 
