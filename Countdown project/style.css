@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("asset/bg.jpeg");
+  background-size: cover;
+  color: black;
+  font-family: "Akaya Telivigala", sans-serif;
+  min-height: 100vh;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: 3rem;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.big-text {
+  font-size: 8rem;
+  font-family: sans-serif;
+  margin-left: 5rem;
+  text-align: center;
+}
+
+.small-text {
+  font-size: 1.5rem;
+  margin-left: 5rem;
+  text-align: center;
+}
