@@ -11,7 +11,7 @@ This project shows how to:
 - update UI elements using javascript
 - build a robust frontend-backend flow
 
-_Note: The countdown will finish on 1st January, 2022. TO change the ending time of the countdown change time [here](./app.js)_
+_Note: The countdown will finish on 1st January, 2022. To change the ending time of the countdown change time [here](./app.js)_
 
 ## Preview
 
