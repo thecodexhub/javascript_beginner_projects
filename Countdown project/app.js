@@ -1,4 +1,4 @@
-const newYear = "1 Jan 2022";
+const newYear = "1 Jan 2022"; // End Date of the countdown
 
 const daysCountdown = document.getElementById("days");
 const hoursCountdown = document.getElementById("hours");
@@ -15,7 +15,6 @@ function countdown() {
 
   const days = Math.floor(totalSeconds / 3600 / 24);
   const hours = Math.floor((totalSeconds / 3600) % 24);
-  //   const minutes = Math.floor((totalSeconds / 60) - ((days * 24) + hours) * 60);
   const minutes = Math.floor((totalSeconds / 60) % 60);
   const seconds = Math.floor(totalSeconds % 60);
 
