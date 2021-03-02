@@ -19,3 +19,7 @@ This project shows how to:
 ## Preview
 
 ![](media/todo_ss_one.PNG)
+
+## Delete animation
+
+![](media/delete_animation.gif)
