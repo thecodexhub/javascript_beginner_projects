@@ -26,28 +26,32 @@
     </header>
 
     <div class="quiz-container">
-      <h2 class="quiz-question">
+      <h2 class="quiz-question" id="quiz_question">
         Which nationality was the polar explorer Roald Amundsen?
       </h2>
 
-      <label class="quiz-option">One
-        <input type="radio" name="radio">
+      <label class="quiz-option">
+        <p id="a_option">One</p>
+        <input type="radio" name="radio" />
         <span class="checkmark"></span>
       </label>
-      <label class="quiz-option">Two
-        <input type="radio" name="radio">
+      <label class="quiz-option">
+        <p id="b_option">Two</p>
+        <input type="radio" name="radio" />
         <span class="checkmark"></span>
       </label>
-      <label class="quiz-option">Three
-        <input type="radio" name="radio">
+      <label class="quiz-option">
+        <p id="c_option">Three</p>
+        <input type="radio" name="radio" />
         <span class="checkmark"></span>
       </label>
-      <label class="quiz-option">Four
-        <input type="radio" name="radio">
+      <label class="quiz-option">
+        <p id="d_option">Four</p>
+        <input type="radio" name="radio" />
         <span class="checkmark"></span>
       </label>
 
-      <button type="submit">Submit answer</button>
+      <button type="submit" id="submit-btn">Submit answer</button>
     </div>
 
     <script src="./app.js"></script>
