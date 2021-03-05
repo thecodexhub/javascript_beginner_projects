@@ -83,6 +83,8 @@ const quizData = [
 ];
 
 let currentQuestionIndex = 0;
+let score = 0;
+let answerId = undefined;
 
 const quiz_question = document.getElementById("quiz_question");
 
@@ -105,12 +107,30 @@ function loadQuiz() {
   d_option.innerText = currentQuizData.d;
 }
 
+function getSelected() {
+  const answers = document.querySelectorAll(".quiz-answer");
+
+  answers.forEach((answer) => {
+    if (answer.checked) {
+      answerId = answer.id;
+    }
+  });
+}
+
 submit_btn.addEventListener("click", function () {
+  getSelected();
+  console.log(answerId);
   currentQuestionIndex++;
 
-  if (currentQuestionIndex < quizData.length) {
+  if (answerId && currentQuestionIndex < quizData.length) {
+    if (answerId === quizData[currentQuestionIndex].correct) {
+      score = score + 1;
+      console.log(score);
+    }
     loadQuiz();
+  } else if (!answerId && currentQuestionIndex < quizData.length) {
+    alert("Please select an option!");
   } else {
-    alert("You have finished the quizzz. thanks!!!");
+    alert(`You have finished the quizzz. thanks!!! \nYour score is: ${score}`);
   }
 });
