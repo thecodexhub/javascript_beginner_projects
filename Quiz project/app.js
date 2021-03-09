@@ -84,9 +84,10 @@ const quizData = [
 
 let currentQuestionIndex = 0;
 let score = 0;
-let answerId = undefined;
 
 const quiz_question = document.getElementById("quiz_question");
+
+const answers = document.querySelectorAll(".quiz-answer");
 
 const a_option = document.getElementById("a_option");
 const b_option = document.getElementById("b_option");
@@ -95,9 +96,13 @@ const d_option = document.getElementById("d_option");
 
 const submit_btn = document.getElementById("submit-btn");
 
+const quiz_container = document.getElementById("quiz-container");
+
 loadQuiz();
 
 function loadQuiz() {
+  deselectAnswers();
+
   const currentQuizData = quizData[currentQuestionIndex];
 
   quiz_question.innerText = currentQuizData.question;
@@ -108,29 +113,36 @@ function loadQuiz() {
 }
 
 function getSelected() {
-  const answers = document.querySelectorAll(".quiz-answer");
+  let answer = undefined;
 
-  answers.forEach((answer) => {
-    if (answer.checked) {
-      answerId = answer.id;
+  answers.forEach((answerEl) => {
+    if (answerEl.checked) {
+      answer = answerEl.id;
     }
+  });
+
+  return answer;
+}
+
+function deselectAnswers() {
+  answers.forEach((answerEl) => {
+    answerEl.checked = false;
   });
 }
 
 submit_btn.addEventListener("click", function () {
-  getSelected();
-  console.log(answerId);
+  let answerId = getSelected();
   currentQuestionIndex++;
 
   if (answerId && currentQuestionIndex < quizData.length) {
     if (answerId === quizData[currentQuestionIndex].correct) {
-      score = score + 1;
-      console.log(score);
+      score++;
     }
     loadQuiz();
   } else if (!answerId && currentQuestionIndex < quizData.length) {
     alert("Please select an option!");
   } else {
-    alert(`You have finished the quizzz. thanks!!! \nYour score is: ${score}`);
+    quiz_container.innerHTML = `<h2 class="quiz-question" id="quiz_question">Yayy! You have scored ${score} marks out of ${quizData.length}</h2>`;
+    // alert(`You have finished the quizzz. thanks!!! \nYour score is: ${score}`);
   }
 });
