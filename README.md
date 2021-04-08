@@ -1,5 +1,9 @@
 # Javascript Beginner Project
 
+A bunch of projects made with HTML, CSS and Javascript only.
+
+## Projects & Previews
+
 - [Todo project](Todo%20project)
 
 ![](Todo%20project/media/todo_ss_one.PNG)
